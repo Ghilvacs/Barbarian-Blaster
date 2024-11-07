@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://6nu01h2fx0h6"]
+
+[ext_resource type="Script" path="res://Base/base.gd" id="1_so8xp"]
+[ext_resource type="FontFile" uid="uid://uptshb3iy2bm" path="res://Assets/Asap/static/Asap-Bold.ttf" id="2_oomkt"]
+[ext_resource type="PackedScene" uid="uid://csededmgqqy1l" path="res://Assets/Base.glb" id="2_yb5su"]
+
+[node name="Base" type="Node3D" groups=["base"]]
+script = ExtResource("1_so8xp")
+max_health = 50
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.5, 0)
+billboard = 1
+text = "Starting  health"
+font = ExtResource("2_oomkt")
+font_size = 500
+outline_size = 100
+
+[node name="Base" parent="." instance=ExtResource("2_yb5su")]
